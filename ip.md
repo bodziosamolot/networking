@@ -14,3 +14,8 @@
 - Identitification if the packet is destined to the same subnet happens on the host sending the packet. It uses the network mask to check if destination address is on the same network. It sends the packet to the gateway and the gateway is on the same network so it can use the MAC address for it.
 - Gateway has two network interfaces. One for every subnet it is in.
 - Database should be in the same subnet as the host communicating with it. That's because of possible router congestion slowing the communication down.
+
+## IP Packet
+
+- MTU - Maximum Transmission Unit
+- MTU forces packet fragmentation
