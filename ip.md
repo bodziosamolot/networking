@@ -17,5 +17,50 @@
 
 ## IP Packet
 
+- IP packet must fit into a single frame
+    - MAC addresses operate at the data link layer (Layer 2) of the OSI model, while IP addresses operate at the network layer (Layer 3)
 - MTU - Maximum Transmission Unit
-- MTU forces packet fragmentation
+    - MTU is most commonly associated with the network layer (Layer 3), where it refers to the maximum size of a packet, including the payload and the network layer headers (e.g., IP header).
+    - MTU forces packet fragmentation
+    - If a packet exceeds the MTU, it must be fragmented into smaller packets before being transmitted over the network. This fragmentation can occur at the network layer, with each smaller packet then encapsulated into a frame for transmission. Fragmentation can also happen at the data link layer, depending on the specific network technology being used.
+- TTL - counter, decremented with each hop
+- Protocol - header indicating the protocol of the data being transmitted with this IP packet
+- ECN - explicit congestion notification
+- congestion 
+    - packets are being dropped
+    - routers have memory, if this memory fills up, packets will be dropped
+    - when router memory is about to fill it will start setting the ECN so the receiver sees there is the danger of congestion
+    - the client will respond to the server with ECN bit set so client and server know about congestion
+
+## ARP
+
+- Address Resolution Protocol
+- When we know the IP Address and don't know the MAC address.
+- ARP table is a cached mapping of IP address to MAC address
+- ARP operates at the network layer (Layer 3) and the data link layer (Layer 2) of the OSI model, facilitating communication between devices on a local network.
+
+### Example
+
+1. **Device A wants to send data to Device B**:
+   - Device A knows Device B's IP address, but not its MAC address.
+
+2. **Device A broadcasts an ARP request**:
+   - The request contains:
+     - Device A's IP and MAC addresses.
+     - Device B's IP address.
+   - The request asks for the MAC address associated with Device B's IP address.
+
+3. **All devices on the network receive the ARP request**:
+   - Only Device B, whose IP address matches the requested IP, responds to the ARP request.
+
+4. **Device B sends an ARP reply to Device A**:
+   - The reply contains Device B's MAC address.
+
+5. **Device A updates its ARP cache**:
+   - Device A stores the new IP-to-MAC mapping in its temporary ARP cache.
+   - This cache reduces the need for frequent ARP requests if the devices communicate frequently.
+
+6. **Device A sends data to Device B**:
+   - Device A creates a frame containing the data.
+   - The frame is addressed using Device B's MAC address.
+   - The frame is transmitted over the network.
