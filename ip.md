@@ -38,6 +38,7 @@
 - When we know the IP Address and don't know the MAC address.
 - ARP table is a cached mapping of IP address to MAC address
 - ARP operates at the network layer (Layer 3) and the data link layer (Layer 2) of the OSI model, facilitating communication between devices on a local network.
+- There is an attack called "ARP Poisoning" where someone says they have the MAC address asked for.
 
 ### Example
 
