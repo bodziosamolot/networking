@@ -1,4 +1,4 @@
-tcpdump -i
+*tcpdump -i en0*
 
 -i interface - Use *ifconfig -l* to list all network interfaces. Network devices with assigned IP addresses are the ones being used:
 
@@ -10,3 +10,17 @@ tcpdump -i
 	nd6 options=201<PERFORMNUD,DAD>
 	media: autoselect
 	status: active
+
+*tcpdump -i en0 arp*
+
+- see all arp announcements on interface *en0*
+
+
+*tcpdump -i en0 arp*
+
+- same as above but without hostnames, only IP addresses
+
+
+*tcpdump -i en0 src [put source ip address here] or dst [destination ip address]*
+
+- filters traffic by source ip address, comming from the specified ip address or destination address
