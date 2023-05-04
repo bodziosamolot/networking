@@ -17,3 +17,4 @@
 
 - is a network protocol that automates the process of assigning IP addresses and other network configuration parameters to devices on a network
 - When a device connects to a network, it sends a DHCP discovery message, requesting an IP address and other network configuration information. The DHCP server, upon receiving the discovery message, responds with a DHCP offer, which includes an available IP address and other network parameters. The device then sends a DHCP request, accepting the offered IP address and configuration. Finally, the DHCP server sends a DHCP acknowledgment, confirming the assignment of the IP address and configuration to the device.
+- e.g. device learns the address of the gateway through DHCP

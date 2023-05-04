@@ -13,3 +13,7 @@
 - operates at the network layer (Layer 3) of the OSI model, using IP addresses to determine the best path for data transmission.
 - typically perform Network Address Translation (NAT), allowing multiple devices within a private network to share a single public IP address for accessing the Internet
 - Many routers include built-in DHCP servers, which automatically assign IP addresses to devices on the network
+
+# Hub
+
+- hub is dumb, it replicates the electric signal to everyone connected to it
