@@ -65,3 +65,13 @@
    - Device A creates a frame containing the data.
    - The frame is addressed using Device B's MAC address.
    - The frame is transmitted over the network.
+
+# Private IP Addresses
+
+- Private IP addresses are a range of IP addresses reserved for use within private networks, such as home, office, or enterprise networks.
+- Private IP addresses help conserve the limited IPv4 address space and provide an additional layer of security by keeping internal network devices hidden from the public Internet.
+- when a private ip address is detected on the public internet, the packets are dropped
+- There are three reserved IP address ranges for private networks, as specified by RFC 1918:
+   - 10.0.0.0 to 10.255.255.255 (10.0.0.0/8)
+   - 172.16.0.0 to 172.31.255.255 (172.16.0.0/12)
+   - 192.168.0.0 to 192.168.255.255 (192.168.0.0/16)
