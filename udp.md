@@ -1,0 +1,21 @@
+# UDP
+
+- User Datagram Protocol
+- Sits on top of Internet Protocol
+- Layer 4 protocol
+- Stateless protocol
+- Addresses processes running on a host using ports. There can be multiple apps running on the host.
+- Much simpler than TCP.
+- Prior communication is not required.
+- Protocols using UDP:
+    - vpn
+    - dns
+    - video streaming
+- Features:
+    - No acknowledgement
+    - No guarantee delivery
+    - Connection-less - anyone can send data without prior knowledge
+    - No flow control
+    - No congestion control
+    - No ordered packets
+    - Security - can be easily spoofed
