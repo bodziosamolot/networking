@@ -75,6 +75,11 @@
 4. Monitoring the congestion window size: The slow start phase continues until the congestion window size reaches a threshold called the "slow start threshold" (ssthresh) or until congestion is detected. The ssthresh is initially set to a large value, and its value is updated dynamically throughout the connection based on network conditions.
 5. Transition to congestion avoidance: Once the congestion window size reaches the slow start threshold or if congestion is detected (e.g., through packet loss), the sender transitions to the congestion avoidance phase. In congestion avoidance, the sender increases the congestion window size more conservatively, using a linear growth algorithm, to avoid causing network congestion.
 
+1. Initially, the sender sets the cwnd to 1 MSS. It sends one packet.
+2. The receiver acknowledges the packet with an ACK. The sender increases the cwnd by 1 MSS. Now, the cwnd is 2 MSS. The sender sends two packets.
+3. The receiver acknowledges both packets with two ACKs. For each ACK, the sender increases the cwnd by 1 MSS. Now, the cwnd is 4 MSS. The sender sends four packets.
+4. The receiver acknowledges all four packets with four ACKs. For each ACK, the sender increases the cwnd by 1 MSS. Now, the cwnd is 8 MSS. The sender sends eight packets.
+
 ## Congestion avoidance
 
 - Once the slow start phase has completed (i.e., the congestion window has reached the slow start threshold or congestion is detected), the congestion avoidance phase begins.
