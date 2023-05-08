@@ -6,7 +6,9 @@
 - Stateless protocol
 - Addresses processes running on a host using ports. There can be multiple apps running on the host.
 - Much simpler than TCP.
+- Is like a firehose
 - Prior communication is not required.
+- UDP segment slides into an IP packet as Data field
 - Protocols using UDP:
     - vpn
     - dns
