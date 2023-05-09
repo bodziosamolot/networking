@@ -64,6 +64,11 @@
 - Sender parameter: Congestion Window (CWND)
 - There are two algorithms for congestion control
 
+- ACK (Acknowledgment) vs RTT (Round Trip Time):
+    - If i send 4 segments i will get an ACK for each segment but it will count as RTT only when i receive ACKs for all segments i've sent
+- What is a dropped packet:
+    - When a packet is sent, a timer is started. When it goes passed a certain value and there is no ACK, then the packet is considered lost.
+
 ## Slow Start
 
 - CWND increases by 1 with each acknowledgment
