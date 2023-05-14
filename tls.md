@@ -9,3 +9,5 @@ TLS is a cryptographic protocol that secures communication between systems, whil
 
 - When using HTTPS with ASP.NET it is not the framework that is responsible for encryption. Encryption is the responsibility of the server. That means that Kestrel is doing the encryption.
 - Kestrel, like other web servers, negotiates a secure connection with the client using the TLS/SSL protocol. This involves exchanging cryptographic keys, agreeing on cipher suites, and establishing an encrypted communication channel. Once the secure channel is established, all data transmitted between the client and the server is encrypted, ensuring confidentiality and integrity.
+
+ 
