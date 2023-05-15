@@ -1,3 +1,9 @@
+# Interfaces
+
+- A machine has multiple network interfaces. Each one of them has it's own IP address.
+- 0.0.0.0:8080 - listen on all interfaces, on port 8080
+- ::1 - ipv6 version of 127.0.0.1
+
 # Host to host communication
 
 - Happens in Layer 2 (sometimes layer 3)
