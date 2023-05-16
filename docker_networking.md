@@ -1,0 +1,2 @@
+- In Mac i can't access docker's internal network by default. The container has access outside of the docker's internal network.
+- In Linux i can access docker's internal network by default
